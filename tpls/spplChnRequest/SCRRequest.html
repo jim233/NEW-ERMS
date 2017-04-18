@@ -1,0 +1,2014 @@
+<div ng-controller="SCRRequest as request">
+	<form>
+		<div ng-show="true">
+			<div class="SCRtitle_contain">
+				<div class="row">
+					<div class="col-md-7 col-xs-12">
+						<button type="button" class="btn_style btn-default" ng-click="request.showSubmenu()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+						<button type="submit" class="btn_style btn-default">
+						<div class="btn_bg"></div>
+						Submit
+					</button>
+					</div>
+					<div class="col-md-3 col-xs-12">
+						<div class="SCR_link_f1">Refer to New Pack Req </div>
+						<a class="SCR_link_f2">27731</a>
+					</div>
+				</div>
+			</div>
+			<div class="second_contain">
+				<div class="row reserve_height">
+					<div class="col-md-12 col-xs-12 Special_text1" ng-show="request.subMenu">Data saved successfully.</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Contact if not originator</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+						<input type="button" value="..." class="btn btn-default file_btn" ng-click="open()">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Lead AI<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Design Code<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">UC Agi Code<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Quantity/Primary Pack Size<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">UoM(e.g. litre)<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Number of packs per outer case (collation)<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text" style="color: red;">Is SPAC packaging required ?*</div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+					<div class="col-md-5 line_height_buttom Common_text">
+						<a>Presentation on Syngenta Branded packs</a>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Reactivation Request</div>
+					<div class="radio_style">
+						<label style="font-weight: normal;">
+    				<input type="radio" name="optionsRadios" value="0">
+    				Yes
+  					</label>
+					</div>
+					<div class="radio_style">
+						<label style="font-weight: normal;">
+    				<input type="radio" name="optionsRadios" value="1">
+    				No
+  					</label>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">NSU Code</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Standard Ancillaries</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+					<a class="col-md-1 col-xs-2 Common_text line_height_buttom">Help</a>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Product Line Seller<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text">Additional Ancillaries/Special Requirements</div>
+					<div class="col-md-1 col-xs-8">
+						<select class="form-control Common_select" style="width: 90px;" ng-change="request.SelectChangeFunc()" ng-model="request.optionChecked" ng-init="request.optionChecked='0'">
+  						<option value="0">Select</option>
+  						<option value="1">Yes</option>
+  						<option value="2">No</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 col-xs-12 col-md-offset-3 line_height_buttom">
+						<textarea class="form-control" rows="3" ng-disabled="request.showTextarea">
+					</textarea>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Trade Name<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Country of sale<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Country Pres Code<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom">
+						<textarea class="form-control" rows="3">
+					</textarea>
+					</div>
+					<a class="col-md-4 col-xs-7 Common_text line_height_buttom">Look up Presentation Code</a>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Make To Order<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Product Category<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+					<div class="col-md-5 line_height_buttom Common_text">
+						<a>Help</a>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Will you be sourcing it locally?<span style="color:red">*</span></div>
+					<div class="radio_style">
+						<label style="font-weight: normal;">
+    				<input type="radio" name="optionsRadios" value="0">
+    				Yes
+  					</label>
+					</div>
+					<div class="radio_style">
+						<label style="font-weight: normal;">
+    				<input type="radio" name="optionsRadios" value="1">
+    				No
+  					</label>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">If so give details</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Date of first Sale<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="date" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-offset-3">
+						<div class="table_contain">
+							<div class="table_Line">
+								<div class="table_title_com">
+									1
+								</div>
+								<div class="table_title_com">
+									2
+								</div>
+								<div class="table_title_com">
+									3
+								</div>
+								<div class="table_title_com">
+									4
+								</div>
+							</div>
+							<div class="table_Line">
+								<div class="table_row_com">
+									a
+								</div>
+								<div class="table_row_com">
+									b
+								</div>
+								<div class="table_row_com">
+									c
+								</div>
+								<div class="table_row_com">
+									d
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Marketing Justification<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom">
+						<textarea class="form-control" rows="8" maxlength="1000">
+					</textarea>
+					</div>
+					<div class="col-md-4 col-xs-7 Common_text line_height_buttom">Maximum 1000 letters</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Supplier<span style="color:blue">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom">
+						<textarea class="form-control" rows="8" maxlength="1000">
+					</textarea>
+					</div>
+					<div class="col-md-4 col-xs-7 Common_text line_height_buttom">Maximum 1000 letters</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Regulatory Contact<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+						<input type="button" value="..." class="btn btn-default file_btn" ng-click="open()">
+					</div>
+				</div>
+				<div class="row line_height_buttom"></div>
+				<div class="row line_height_buttom"></div>
+				<div class="row line_height_buttom">
+					<div class="col-md-12 col-xs-12 Common_text"><span style="color:blue">*</span>- Provide details of supplier if Lead AI is not in drop down list.</div>
+				</div>
+			</div>
+		</div>
+
+		<!--SupplyChain1 -> Use from SupplyChainHome-->
+		<div ng-show="true">
+			<div class="SCRtitle_contain">
+				<div class="row">
+					<div class="col-md-7 col-xs-12">
+						<button type="button" class="btn_style btn-default" ng-click="request.showSubmenu()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+						<button type="submit" class="btn_style btn-default">
+						<div class="btn_bg"></div>
+						Submit
+					</button>
+					</div>
+					<div class="col-md-3 col-xs-12">
+						<div class="SCR_link_f1">Refer to New Pack Req</div>
+						<a class="SCR_link_f2">27731</a>
+					</div>
+				</div>
+			</div>
+			<div class="second_contain">
+				<div class="row reserve_height">
+					<div class="col-md-12 col-xs-12 Special_text1" ng-show="request.subMenu">Data saved successfully.</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Contact if not originator</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+						<input type="button" value="..." class="btn btn-default file_btn" ng-click="open()">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Details for changes to be made LeadAI</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" placeholder="ABAMECTIN">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Changes to be made (Effective Date)<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="date" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Current Design Code Variant A No<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">New Design Code Variant A No<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Current UC Agi Code<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+					<div class="col-md-4 col-xs-12 Common_text">Please enter only numbers(Maximum 10 digits)</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">New UC Agi Code<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+					<div class="col-md-4 col-xs-12 Common_text">Please enter only numbers(Maximum 10 digits)</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Current pack<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">New pack<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Make To Order<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Current Source</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">New Source</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-12 col-xs-12" style="margin-left: -15px;">
+						<div class="table_contain1">
+							<div class="table_Line">
+								<div class="table_title_com">
+									SU Agi Code affected <span style="color:red">*</span>
+								</div>
+								<div class="table_title_com">
+									Country of Sales <span style="color:red">*</span>
+								</div>
+								<div class="table_title_com">
+									TradeName <span style="color:red">*</span>
+								</div>
+								<div class="table_title_com">
+									Presentation Code <span style="color:red">*</span>
+								</div>
+								<div class="table_title_com">
+									Product Line Seller <span style="color:red">*</span>
+								</div>
+							</div>
+							<div class="table_Line">
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<input type="button" value="New Row" class="btn btn-default file_btn3" ng-click="add()">
+							</div>
+							<div class="table_Line">
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+							</div>
+							<div class="table_Line">
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+							</div>
+							<div class="table_Line">
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+							</div>
+							<div class="table_Line" ng-repeat="r in InputRepeat" ng-model="Inputid">
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control" ng-model="Inputid">
+								</div>
+								<div class="table_row_com">
+									{{Inputid}}<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<input type="button" value="Delete" class="btn btn-default file_btn3" ng-click="del($index)">
+							</div>
+						</div>
+						<!--<input type="text" class="table_row1 form-control">-->
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Background Information</div>
+					<div class="col-md-4 col-xs-8 line_height_buttom">
+						<textarea class="form-control" rows="8" maxlength="1000">
+					</textarea>
+					</div>
+					<div class="col-md-4 col-xs-7 Common_text line_height_buttom">Maximum 1000 letters</div>
+				</div>
+				<div class="row line_height_buttom"></div>
+				<div class="row line_height_buttom"></div>
+			</div>
+		</div>
+
+		<!--SupplyChain2-->
+		<div ng-show="true">
+			<div class="SCRtitle_contain">
+				<div class="row">
+					<div class="col-md-7 col-xs-12">
+						<button type="button" class="btn_style btn-default">
+						<div class="btn_bg"></div>
+						Copy
+						</button>
+						<button type="button" class="btn_style btn-default" ng-click="request.showSubmenu()">
+						<div class="btn_bg"></div>
+						Save
+						</button>
+						<button type="submit" class="btn_style btn-default">
+						<div class="btn_bg"></div>
+						Submit
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="second_contain">
+				<div class="row reserve_height">
+					<div class="col-md-12 col-xs-12 Special_text1" ng-show="request.subMenu">Data saved successfully.</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Contact if not originator</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+						<input type="button" value="..." class="btn btn-default file_btn" ng-click="open()">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">SMS Team</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Lead AI<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+						</select>
+					</div>
+					<div class="col-md-2 col-xs-4 Common_text line_height_buttom">Or Type here</div>
+					<div class="col-md-3 col-xs-8 line_height_buttom">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Category e.g.growth/value/cash</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Design Code<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Uc Agi Code<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Formulation Description<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom">
+						<textarea class="form-control" rows="3">
+					</textarea>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Quantity/Primary Pack Size<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">UoM(e.g. litre)<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Number of packs per outer case (collation)<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Make To Order<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Ancillaries/Special Requirements</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+					<a class="col-md-1 col-xs-2 Common_text line_height_buttom">Help</a>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Comments</div>
+					<div class="col-md-1 col-xs-8">
+						<select class="form-control Common_select line_height_buttom" style="width: 90px;" ng-change="request.SelectChangeFunc()" ng-model="request.optionChecked" ng-init="request.optionChecked='0'">
+  						<option value="0">Select</option>
+  						<option value="1">Yes</option>
+  						<option value="2">No</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 col-xs-12 col-md-offset-3 line_height_buttom">
+						<textarea class="form-control" rows="3" ng-disabled="request.showTextarea">
+					</textarea>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Product Line Seller<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Trade Name<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Country of sale<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Country Pres Code<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom">
+						<textarea class="form-control" rows="3">
+					</textarea>
+					</div>
+					<a class="col-md-4 col-xs-7 Common_text line_height_buttom">Look up Presentation Code</a>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Make To Order<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Product Category<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+					<div class="col-md-5 line_height_buttom Common_text">
+						<a>Help</a>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Date of first Sale<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="date" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Regulatory Contact<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+						<input type="button" value="..." class="btn btn-default file_btn" ng-click="open()">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Comment</div>
+					<div class="col-md-4 col-xs-8 line_height_buttom">
+						<textarea class="form-control" rows="8" maxlength="1000">
+					</textarea>
+					</div>
+					<div class="col-md-4 col-xs-7 Common_text line_height_buttom">Maximum 1000 letters</div>
+				</div>
+				<div class="row line_height_buttom"></div>
+				<div class="row line_height_buttom"></div>
+			</div>
+		</div>
+
+		<!--IMC-Yes-Product-->
+		<div ng-show="true">
+			<div class="SCRtitle_contain">
+				<div class="row">
+					<div class="col-md-7 col-xs-12">
+						<button type="button" class="btn_style btn-default" ng-click="request.showSubmenu()">
+						<div class="btn_bg"></div>
+						Save
+						</button>
+						<button type="submit" class="btn_style btn-default">
+						<div class="btn_bg"></div>
+						Submit
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="second_contain">
+				<div class="row reserve_height">
+					<div class="col-md-12 col-xs-12 Special_text1" ng-show="request.subMenu">Data saved successfully.</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-7 col-xs-12 Common_text">Please ensure that you have registered your request on range Enhancement sharepoint site </div>
+					<a class="col-md-5 col-xs-12">http://ts1.pro.intra/sites/GLRE/default.aspx</a>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Contact if not originator</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+						<input type="button" value="..." class="btn btn-default file_btn" ng-click="open()">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Lead AI<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Design Code<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Uc Agi Code<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Quantity/Primary Pack Size<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">UoM(e.g. litre)<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Number of packs per outer case (collation)<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Make To Order<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Product Line Seller<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Trade Name<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Country of sale<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Country Pres Code<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom">
+						<textarea class="form-control" rows="3">
+					</textarea>
+					</div>
+					<a class="col-md-4 col-xs-7 Common_text line_height_buttom">Look up Presentation Code</a>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">3rd Party Supplier<span style="color:blue">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Regulatory Contact</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+						<input type="button" value="..." class="btn btn-default file_btn">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">NSU Code(For IDS Data Management Use)</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom"></div>
+				<div class="row line_height_buttom"></div>
+				<div class="row line_height_buttom">
+					<div class="col-md-12 col-xs-12 Common_text"><span style="color:blue">*</span> From whom will this material be purchased?</div>
+				</div>
+			</div>
+		</div>
+
+		<!--IMC-Yes-non-->
+		<div ng-show="true">
+			<div class="SCRtitle_contain">
+				<div class="row">
+					<div class="col-md-7 col-xs-12">
+						<button type="button" class="btn_style btn-default" ng-click="request.showSubmenu()">
+						<div class="btn_bg"></div>
+						Save
+						</button>
+						<button type="submit" class="btn_style btn-default">
+						<div class="btn_bg"></div>
+						Submit
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="second_contain">
+				<div class="row reserve_height">
+					<div class="col-md-12 col-xs-12 Special_text1" ng-show="request.subMenu">Data saved successfully.</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Contact if not originator</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+						<input type="button" value="..." class="btn btn-default file_btn" ng-click="open()">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Lead AI<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Product Line Seller</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Description</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">UOM</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Comments </div>
+					<div class="col-md-4 col-xs-8 line_height_buttom">
+						<textarea class="form-control" rows="8" maxlength="1000">
+					</textarea>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Country<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Country Pres Code<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom">
+						<textarea class="form-control" rows="3">
+					</textarea>
+					</div>
+					<a class="col-md-4 col-xs-7 Common_text line_height_buttom">Look up Presentation Code</a>
+				</div>
+			</div>
+		</div>
+
+		<!--NEW Pack SCRRequest-->
+		<div ng-show="true">
+			<div class="SCRtitle_contain">
+				<div class="row">
+					<div class="col-md-7 col-xs-12">
+						<button type="button" class="btn_style btn-default" ng-click="request.showSubmenu()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+						<button type="submit" class="btn_style btn-default">
+						<div class="btn_bg"></div>
+						Submit
+					</button>
+					</div>
+				</div>
+			</div>
+			<div class="second_contain">
+				<div class="row reserve_height">
+					<div class="col-md-12 col-xs-12 Special_text1" ng-show="request.subMenu">Data saved successfully.</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Lead AI<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">UC Agi Code</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Design Code<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">UC Agi Code<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Quantity/Primary Pack Size<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Part Filled Quantity<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">UoM(e.g. litre)<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Number of packs per outer case (collation)<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text" style="color: red;">Is SPAC packaging required ?*</div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+					<div class="col-md-5 line_height_buttom Common_text">
+						<a>Presentation on Syngenta Branded packs</a>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Reactivation Request</div>
+					<div class="radio_style">
+						<label style="font-weight: normal;">
+    				<input type="radio" name="optionsRadios" value="0">
+    				Yes
+  					</label>
+					</div>
+					<div class="radio_style">
+						<label style="font-weight: normal;">
+    				<input type="radio" name="optionsRadios" value="1">
+    				No
+  					</label>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Product Line Seller<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Trade Name<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Make To Order<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Will you be sourcing this combi element locally ??</div>
+					<div class="radio_style">
+						<label style="font-weight: normal;">
+    				<input type="radio" name="optionsRadios" value="0">
+    				Yes
+  					</label>
+					</div>
+					<div class="radio_style">
+						<label style="font-weight: normal;">
+    				<input type="radio" name="optionsRadios" value="1">
+    				No
+  					</label>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">If so give details</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--SCR COMBI Pack-->
+		<div ng-show="true">
+			<div class="SCRtitle_contain">
+				<div class="row">
+					<div class="col-md-7 col-xs-12">
+						<button type="button" class="btn_style btn-default" ng-click="request.showSubmenu()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+						<button type="submit" class="btn_style btn-default">
+						<div class="btn_bg"></div>
+						Submit
+					</button>
+					</div>
+					<div class="col-md-3 col-xs-12">
+						<div class="SCR_link_f1">Refer to New Pack Req </div>
+						<a class="SCR_link_f2">27731</a>
+					</div>
+				</div>
+			</div>
+			<div class="second_contain">
+				<div class="row reserve_height">
+					<div class="col-md-12 col-xs-12 Special_text1" ng-show="request.subMenu">Data saved successfully.</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-12 Common_text2">COMBI Pack Product Detail</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Contact if not originator</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+						<input type="button" value="..." class="btn btn-default file_btn" ng-click="open()">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Combi Lead AI</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Combi Pack Collation</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text" style="color: red;">Is SPAC packaging required ?</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Reactivation Request</div>
+					<div class="radio_style">
+						<label style="font-weight: normal;">
+    				<input type="radio" name="optionsRadios" value="0">
+    				Yes
+  					</label>
+					</div>
+					<div class="radio_style">
+						<label style="font-weight: normal;">
+    				<input type="radio" name="optionsRadios" value="1">
+    				No
+  					</label>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">AGI Code to Reactivate<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Do you want UOM as PC (Piece)?<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Make To Order<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Combi Country of sale<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Presentation Code<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom">
+						<textarea class="form-control" rows="3">
+					</textarea>
+					</div>
+					<a class="col-md-4 col-xs-7 Common_text line_height_buttom">Look up Presentation Code</a>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Will you be assembling this combi pack locally?<span style="color:red">*</span></div>
+					<div class="radio_style">
+						<label style="font-weight: normal;">
+    				<input type="radio" name="optionsRadios" value="0">
+    				Yes
+  					</label>
+					</div>
+					<div class="radio_style">
+						<label style="font-weight: normal;">
+    				<input type="radio" name="optionsRadios" value="1">
+    				No
+  					</label>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">If so give details</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Planned date of first Sale<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="date" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Product Line</div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">TradeName</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-12 col-xs-12 Common_text">This Combi Pack contains 2 elements</div>
+				</div>
+				<div class="row line_height_buttom"></div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-12 Common_text2">Combi Element 1</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 col-xs-12 Common_text">This element required a range request</div>
+					<div class="col-md-3 col-xs-12 Common_text">New Pack</div>
+					<div class="col-md-4 col-xs-12">
+						<div class="SCR_link_f1">Click here to view Range Request</div>
+						<a class="SCR_link_f2">27731</a>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-4 col-xs-12 Common_text">Status of Request: Rejected</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Combi Element SU</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Lead AI</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Design Code Variant A No.</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">UC Agi Code</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Bottle Size</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Part Filled Quantity</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text" style="color: red;">Is SPAC packaging required ?</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Trade Name</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Productline</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom"></div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-12 Common_text2">Combi Element 2</div>
+				</div>
+				<div class="row ">
+					<div class="col-md-4 col-xs-12 Common_text">This element required a range request</div>
+					<div class="col-md-3 col-xs-12 Common_text">New Pack</div>
+					<div class="col-md-4 col-xs-12">
+						<div class="SCR_link_f1">Click here to view Range Request</div>
+						<a class="SCR_link_f2">27731</a>
+					</div>
+				</div>
+				<div class="row ">
+					<div class="col-md-4 col-xs-12 Common_text">With FAST for source </div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-4 col-xs-12 Common_text">Status of Request: Rejected</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Combi Element SU</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Lead AI</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Design Code Variant A No.</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">UC Agi Code</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Bottle Size</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Part Filled Quantity</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text" style="color: red;">Is SPAC packaging required ?</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Trade Name</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Productline</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-12 Common_text2">Business Case for COMBI Pack</div>
+					<div class="col-md-8 col-xs-12" style="margin-left: -15px;">
+						<div class="table_contain1">
+							<div class="table_Line">
+								<div class="table_title_com">
+									Year
+								</div>
+								<div class="table_title_com">
+									2016
+								</div>
+								<div class="table_title_com">
+									2017
+								</div>
+								<div class="table_title_com">
+									2018
+								</div>
+							</div>
+							<div class="table_Line">
+								<div class="table_row_com">
+									Sales Price per lt/kg in US$<span style="color:red">*</span>
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+							</div>
+							<div class="table_Line">
+								<div class="table_row_com">
+									Volume (000's lts/kgs)<span style="color:red">*</span>
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+							</div>
+							<div class="table_Line">
+								<div class="table_row_com">
+									Total Sales Value US$<span style="color:red">*</span>
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+								<div class="table_row_com">
+									<input type="text" class="table_row1 form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Marketing Justification<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom">
+						<textarea class="form-control" rows="8" maxlength="1000">
+					</textarea>
+					</div>
+					<div class="col-md-4 col-xs-7 Common_text line_height_buttom">Maximum 1000 letters</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-12 Common_text2">Regulatory Approval </div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-12 col-xs-12 Common_text2">Please ensure this product/pack request has been approved by your local Regulatory Manager and provide his/her name below to confirm this </div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Regulatory Manager<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+						<input type="button" value="..." class="btn btn-default file_btn" ng-click="open()">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--SCR COMBI Pack-->
+		<div ng-show="true">
+			<div class="SCRtitle_contain">
+				<div class="row">
+					<div class="col-md-7 col-xs-12">
+						<button type="button" class="btn_style btn-default" ng-click="request.showSubmenu()">
+						<div class="btn_bg"></div>
+						Next
+					</button>
+					</div>
+				</div>
+			</div>
+			<div class="second_contain">
+				<div class="row reserve_height">
+					<div class="col-md-12 col-xs-12 Special_text1" ng-show="request.subMenu">Data saved successfully.</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-6 col-xs-4 Common_text">You have selected a 2 Formulation/Product Combi-Pack </div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-12 Common_text2">Combi Pack Sales Unit Details</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Combi Pack Collation Description</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Combi Pack Lead AI<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input" required="required">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Combi Pack Product Line<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Combi Pack Trade name<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Combi Pack Country of sale<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Combi Pack Presentation Code<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom">
+						<textarea class="form-control" rows="3">
+					</textarea>
+					</div>
+					<a class="col-md-4 col-xs-7 Common_text line_height_buttom">Look up Presentation Code</a>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Product Category<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+					<a class="col-md-4 col-xs-7 Common_text line_height_buttom">Help</a>
+				</div>
+				<div class="row line_height_buttom"></div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-12 Common_text2">Element 1</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Quantity=<span style="color:red">*</span></div>
+					<div class="col-md-1 col-xs-2 line_height_buttom1">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+					<div class="col-md-1 col-xs-2 line_height_buttom1">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X
+					</div>
+					<div class="col-md-1 col-xs-2 line_height_buttom1">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+					<div class="col-md-1 col-xs-2 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Fill Quantity (if part filled)</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">LEAD AI<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Formulation<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Pack Size <span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Do you require Syngenta Branded Pack<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+					<div class="col-md-5 line_height_buttom Common_text">
+						<a>Presentation on Syngenta Branded packs</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Product Line<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Tradename</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-11 col-xs-12 Common_text">Does an Su already exist for this country/presentation code for this combi pack element?</div>
+					<div class="col-md-11 col-xs-12 Common_text">For example, if you require 2x5 litres in your final combi pack - is there an SU set up for the 4x5 litres or if you require 3x1 litres in your combi pack - is there an SU set up for the 12x1 litres? </div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-5 col-xs-12 line_height_buttom Common_text">
+						<a>Use this link to S-Magic to help you find/check this information</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Does a Sales Unit Exist to supply this component?<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">If YES - Enter SU Agi Code</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom"></div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-12 Common_text2">Element 2</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Quantity=<span style="color:red">*</span></div>
+					<div class="col-md-1 col-xs-2 line_height_buttom1">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+					<div class="col-md-1 col-xs-2 line_height_buttom1">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X
+					</div>
+					<div class="col-md-1 col-xs-2 line_height_buttom1">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+					<div class="col-md-1 col-xs-2 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Fill Quantity (if part filled)</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">LEAD AI<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Formulation<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Pack Size <span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Do you require Syngenta Branded Pack<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+					<div class="col-md-5 line_height_buttom Common_text">
+						<a>Presentation on Syngenta Branded packs</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Product Line<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Tradename</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-11 col-xs-12 Common_text">Does an Su already exist for this country/presentation code for this combi pack element?</div>
+					<div class="col-md-11 col-xs-12 Common_text">For example, if you require 2x5 litres in your final combi pack - is there an SU set up for the 4x5 litres or if you require 3x1 litres in your combi pack - is there an SU set up for the 12x1 litres? </div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-5 col-xs-12 line_height_buttom Common_text">
+						<a>Use this link to S-Magic to help you find/check this information</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Does a Sales Unit Exist to supply this component?<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">If YES - Enter SU Agi Code</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom"></div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-12 Common_text2">Element 3</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Quantity=<span style="color:red">*</span></div>
+					<div class="col-md-1 col-xs-2 line_height_buttom1">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+					<div class="col-md-1 col-xs-2 line_height_buttom1">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X
+					</div>
+					<div class="col-md-1 col-xs-2 line_height_buttom1">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+					<div class="col-md-1 col-xs-2 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Fill Quantity (if part filled)</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">LEAD AI<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Formulation<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Pack Size <span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Do you require Syngenta Branded Pack<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+					<div class="col-md-5 line_height_buttom Common_text">
+						<a>Presentation on Syngenta Branded packs</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Product Line<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Tradename</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-11 col-xs-12 Common_text">Does an Su already exist for this country/presentation code for this combi pack element?</div>
+					<div class="col-md-11 col-xs-12 Common_text">For example, if you require 2x5 litres in your final combi pack - is there an SU set up for the 4x5 litres or if you require 3x1 litres in your combi pack - is there an SU set up for the 12x1 litres? </div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-5 col-xs-12 line_height_buttom Common_text">
+						<a>Use this link to S-Magic to help you find/check this information</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Does a Sales Unit Exist to supply this component?<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">If YES - Enter SU Agi Code</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom"></div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-12 Common_text2">Element 4</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Quantity=<span style="color:red">*</span></div>
+					<div class="col-md-1 col-xs-2 line_height_buttom1">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+					<div class="col-md-1 col-xs-2 line_height_buttom1">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X
+					</div>
+					<div class="col-md-1 col-xs-2 line_height_buttom1">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+					<div class="col-md-1 col-xs-2 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Fill Quantity (if part filled)</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">LEAD AI<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Formulation<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Pack Size <span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Do you require Syngenta Branded Pack<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+					<div class="col-md-5 line_height_buttom Common_text">
+						<a>Presentation on Syngenta Branded packs</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Product Line<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Tradename</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-11 col-xs-12 Common_text">Does an Su already exist for this country/presentation code for this combi pack element?</div>
+					<div class="col-md-11 col-xs-12 Common_text">For example, if you require 2x5 litres in your final combi pack - is there an SU set up for the 4x5 litres or if you require 3x1 litres in your combi pack - is there an SU set up for the 12x1 litres? </div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-5 col-xs-12 line_height_buttom Common_text">
+						<a>Use this link to S-Magic to help you find/check this information</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Does a Sales Unit Exist to supply this component?<span style="color:red">*</span></div>
+					<div class="col-md-4 col-xs-8 line_height_buttom1">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">If YES - Enter SU Agi Code</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row line_height_buttom"></div>
+		<div class="row line_height_buttom"></div>
+	</form>
+</div>

@@ -1,0 +1,533 @@
+<div ng-controller="SCRSCTeam as SCTeam">
+	<!--Supply Chain SCTeam-->
+	<form>
+		<div class="SCRtitle_contain">
+		</div>
+		<div class="second_contain">
+			<div class="row reserve_height">
+				<!--<div class="col-md-12 col-xs-12 Special_text1" ng-show="SCTeam.subMenu">Data saved successfully.</div>-->
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text2">Packaging</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Approved</div>
+				<div class="col-md-4 col-xs-8">
+					<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Pack Technologist</div>
+				<div class="col-md-4 col-xs-8">
+					<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Comments</div>
+				<div class="col-md-4 col-xs-12 line_height_buttom">
+					<textarea class="form-control" rows="8" ng-disabled="request.showTextarea">
+					</textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2 col-xs-4 col-md-offset-3">
+					<button type="button" class="btn_style btn-default" ng-click="SCTeam.showSubmenu1()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+				</div>
+				<div class="col-md-6 col-xs-8 Special_text1" ng-show="SCTeam.subMenu1">Data saved successfully.</div>
+			</div>
+		</div>
+	</form>
+	<form>
+		<div class="second_contain">
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text2">F&P Sourcing</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Approved</div>
+				<div class="col-md-4 col-xs-8">
+					<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Comments</div>
+				<div class="col-md-4 col-xs-12 line_height_buttom">
+					<textarea class="form-control" rows="8" ng-disabled="request.showTextarea">
+					</textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2 col-xs-4 col-md-offset-3">
+					<button type="button" class="btn_style btn-default" ng-click="SCTeam.showSubmenu2()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+				</div>
+				<div class="col-md-6 col-xs-8 Special_text1" ng-show="SCTeam.subMenu2">Data saved successfully.</div>
+			</div>
+		</div>
+	</form>
+	<form>
+		<div class="second_contain">
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text2">Pack Purchasing</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Approved</div>
+				<div class="col-md-4 col-xs-8">
+					<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Comments</div>
+				<div class="col-md-4 col-xs-12 line_height_buttom">
+					<textarea class="form-control" rows="8" ng-disabled="request.showTextarea">
+					</textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2 col-xs-4 col-md-offset-3">
+					<button type="button" class="btn_style btn-default" ng-click="SCTeam.showSubmenu3()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+				</div>
+				<div class="col-md-6 col-xs-8 Special_text1" ng-show="SCTeam.subMenu3">Data saved successfully.</div>
+			</div>
+		</div>
+	</form>
+	<form>
+		<div class="second_contain">
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text2">Administrator</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Outcome</div>
+				<div class="col-md-4 col-xs-8">
+					<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">View Issue Log</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="button" value="Update Concerns Issue Log" class="btn btn-default file_btn2">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Resolution Comments</div>
+				<div class="col-md-4 col-xs-12 line_height_buttom">
+					<textarea class="form-control" rows="8" ng-disabled="request.showTextarea">
+					</textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2 col-xs-4 col-md-offset-3">
+					<button type="button" class="btn_style btn-default" ng-click="SCTeam.showSubmenu4()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+				</div>
+				<div class="col-md-6 col-xs-8 Special_text1" ng-show="SCTeam.subMenu4">Data saved successfully.</div>
+			</div>
+			<div class="row line_height_buttom"></div>
+		</div>
+	</form>
+
+	<!--New pack SCTeam-->
+	<form>
+		<div class="SCRtitle_contain">
+			<div class="row">
+				<div class="col-md-7 col-xs-12">
+					<button type="button" class="btn_style btn-default" ng-click="RDM.showSubmenu()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+					<button type="submit" class="btn_style btn-default">
+						<div class="btn_bg"></div>
+						Submit
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="second_contain">
+			<div class="row reserve_height">
+				<div class="col-md-12 col-xs-12 Special_text1" ng-show="RDM.subMenu">Data saved successfully.</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Pack Technology Head</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Approved</div>
+				<div class="col-md-4 col-xs-8">
+					<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Pack Responsibility</div>
+				<div class="col-md-4 col-xs-8">
+					<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Comments</div>
+				<div class="col-md-4 col-xs-8 line_height_buttom">
+					<textarea class="form-control" rows="8" maxlength="1000">
+					</textarea>
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Administrator</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Outcome</div>
+				<div class="col-md-4 col-xs-8 line_height_buttom1">
+					<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">View Issue Log</div>
+				<div class="col-md-4 col-xs-8 line_height_buttom1">
+					<a>Update Concerns Issue Log</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Resolution Comments</div>
+				<div class="col-md-4 col-xs-8 line_height_buttom">
+					<textarea class="form-control" rows="8" maxlength="1000">
+					</textarea>
+				</div>
+			</div>
+			<div class="row line_height_buttom"></div>
+			<div class="row line_height_buttom"></div>
+		</div>
+	</form>
+
+	<!--Combi Pack SCTeam-->
+	<form>
+		<div class="SCRtitle_contain">
+		</div>
+		<div class="second_contain">
+			<div class="row reserve_height">
+				<!--<div class="col-md-12 col-xs-12 Special_text1" ng-show="SCTeam.subMenu">Data saved successfully.</div>-->
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text2">GSCM</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Approved</div>
+				<div class="col-md-4 col-xs-8">
+					<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Comments</div>
+				<div class="col-md-4 col-xs-12 line_height_buttom">
+					<textarea class="form-control" rows="8" ng-disabled="request.showTextarea">
+					</textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2 col-xs-4 col-md-offset-3">
+					<button type="button" class="btn_style btn-default" ng-click="SCTeam.showSubmenu1()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+				</div>
+				<div class="col-md-6 col-xs-8 Special_text1" ng-show="SCTeam.subMenu1">Data saved successfully.</div>
+			</div>
+		</div>
+	</form>
+	<form>
+		<div class="second_contain">
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text2">Packaging</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Approved</div>
+				<div class="col-md-4 col-xs-8">
+					<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Comments</div>
+				<div class="col-md-4 col-xs-12 line_height_buttom">
+					<textarea class="form-control" rows="8" ng-disabled="request.showTextarea">
+					</textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2 col-xs-4 col-md-offset-3">
+					<button type="button" class="btn_style btn-default" ng-click="SCTeam.showSubmenu2()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+				</div>
+				<div class="col-md-6 col-xs-8 Special_text1" ng-show="SCTeam.subMenu2">Data saved successfully.</div>
+			</div>
+		</div>
+	</form>
+	<form>
+		<div class="second_contain">
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text2">F&P Sourcing</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Approved</div>
+				<div class="col-md-4 col-xs-8">
+					<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">CombiPack assembly plant</div>
+				<div class="col-md-4 col-xs-12 line_height_buttom">
+					<textarea class="form-control" rows="8" ng-disabled="request.showTextarea">
+					</textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2 col-xs-4 col-md-offset-3">
+					<button type="button" class="btn_style btn-default" ng-click="SCTeam.showSubmenu2()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+				</div>
+				<div class="col-md-6 col-xs-8 Special_text1" ng-show="SCTeam.subMenu2">Data saved successfully.</div>
+			</div>
+		</div>
+	</form>
+	<form>
+		<div class="second_contain">
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text2">Global Transfer Pricing</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Approved</div>
+				<div class="col-md-4 col-xs-8">
+					<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Principal Legal Entity</div>
+				<div class="col-md-4 col-xs-12 line_height_buttom">
+					<textarea class="form-control" rows="8" ng-disabled="request.showTextarea">
+					</textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2 col-xs-4 col-md-offset-3">
+					<button type="button" class="btn_style btn-default" ng-click="SCTeam.showSubmenu3()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+				</div>
+				<div class="col-md-6 col-xs-8 Special_text1" ng-show="SCTeam.subMenu3">Data saved successfully.</div>
+			</div>
+		</div>
+	</form>
+	<form>
+		<div class="second_contain">
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text2">Pack Purchasing</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Approved</div>
+				<div class="col-md-4 col-xs-8">
+					<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Comments</div>
+				<div class="col-md-4 col-xs-12 line_height_buttom">
+					<textarea class="form-control" rows="8" ng-disabled="request.showTextarea">
+					</textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2 col-xs-4 col-md-offset-3">
+					<button type="button" class="btn_style btn-default" ng-click="SCTeam.showSubmenu4()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+				</div>
+				<div class="col-md-6 col-xs-8 Special_text1" ng-show="SCTeam.subMenu4">Data saved successfully.</div>
+			</div>
+			<div class="row line_height_buttom"></div>
+		</div>
+	</form>
+	<form>
+		<div class="second_contain">
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Administrator</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Outcome</div>
+				<div class="col-md-4 col-xs-8">
+					<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">View Issue Log</div>
+				<div class="col-md-4 col-xs-8">
+					<a>Update Concerns Issue Log</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Resolution Comments</div>
+				<div class="col-md-4 col-xs-12 line_height_buttom">
+					<textarea class="form-control" rows="8" ng-disabled="request.showTextarea">
+					</textarea>
+				</div>
+			</div>
+
+			<!--Tao add part start-->
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Data management</div>
+				<div class="col-md-4 col-xs-12 line_height_buttom">
+					<textarea class="form-control" class="form-control" rows="8">
+						</textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Approved</div>
+				<div class="col-md-4 col-xs-12 line_height_buttom">
+					<select class="form-control Common_select">
+							<option>All</option>
+  							<option>2</option>
+  							<option>3</option>
+						</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">EST Data of Completion</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Comments</div>
+				<div class="col-md-4 col-xs-12 line_height_buttom">
+					<textarea class="form-control" rows="8" ng-model="SCTeam.PPcomments" ng-readonly="SCTeam.PPCommentsReadOnly">
+						</textarea>
+				</div>
+			</div>
+			<!--Tao add part end-->
+
+			<div class="row">
+				<div class="col-md-2 col-xs-4 col-md-offset-3">
+					<button type="button" class="btn_style btn-default" ng-click="SCTeam.showSubmenu4()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+				</div>
+				<div class="col-md-6 col-xs-8 Special_text1" ng-show="SCTeam.subMenu4">Data saved successfully.</div>
+			</div>
+			<div class="row line_height_buttom"></div>
+		</div>
+
+	</form>
+
+	<!--NPR 2-->
+	<div class="fix_banner">
+		<div class="banner_style">
+			EPM input - Add to Core Range = Yes
+		</div>
+		<!--SCR 1-->
+		<div class="banner_style">
+			Note:Please click on save button if you wish to complete the screen.
+		</div>
+	</div>
+</div>

@@ -1,0 +1,85 @@
+<div>
+	<div class="row_block line_height_buttom" ng-show="false">
+		<h3>Supply Chain Request - <span ng-bind='SupplyChain.titleName'></span></h3>
+		<!--<p>Fields marked <span style="color:red">*</span> are Mandatory</p>-->
+	</div>
+	<div class="row_block line_height_buttom" ng-show="true">
+		<h3>New Pack Request - <span ng-bind='SupplyChain.titleName'></span></h3>
+	</div>
+	<div class="row_block">
+		<div class="table_td">Range Request Number</div>
+		<div class="table_td" ng-bind="SupplyChain.supplyDetail.rangeNumber"></div>
+		<div class="table_td">Range Request Type</div>
+		<div class="table_td">Supply Chain</div>
+		<div class="table_td table_td_over">View History</div>
+
+		<div class="table_td">Originator</div>
+		<div class="table_td">Joe Pang</div>
+		<div class="table_td">Created Date</div>
+		<div class="table_td">03/05/2016</div>
+		<div class="table_td table_td_over">Back to New Code Requests</div>
+
+		<div class="table_td">Lead AI</div>
+		<div class="table_td">AZOXYSTROBIN</div>
+		<div class="table_td"></div>
+		<div class="table_td"></div>
+		<div class="table_td"></div>
+		<div class="table_td"></div>
+
+		<div class="table_td"></div>
+		<div class="table_td"></div>
+		<div class="table_td"></div>
+		<div class="table_td"></div>
+		<div class="table_td">Date Code Due</div>
+		<div class="table_td">28/05/2016</div>
+	</div>
+
+	<div class="row_block" style="margin-top:20px;">
+		<div class="table_tdS">Status</div>
+		<div class="table_tdS">Rejected</div>
+		<div class="table_tdS">Status Last Changed on</div>
+		<div class="table_tdS">07/07/2016</div>
+	</div>
+
+	<div class="row_block">
+		<ul class="ul_list_style">
+			<a class= "ul_list_floatLeft" 
+				ng-repeat="m in SupplyChain.subTabSCRs" ng-href="{{m.url}}" ng-bind="m.printName" 
+				ng-class="{true:'Tabactive2',false:''}[header.subTabActive('SupplyChainRequest.' + m.name)]">
+			</a>
+
+			<!--<a class="ul_list_floatLeft" ng-href="{{SupplyChain.hreftest}}" ng-class="{true:'Tabactive2',false:''}[SupplyChain.subTabActive('SupplyChainRequest.request')]">
+				Request
+			</a>
+			<a class="ul_list_floatLeft" ui-sref=".EPM" ng-class="{true:'Tabactive2',false:''}[SupplyChain.subTabActive('SupplyChainRequest.EPM')]">
+				EPM
+			</a>
+			<a class="ul_list_floatLeft" ui-sref=".Fast" ng-class="{true:'Tabactive2',false:''}[SupplyChain.subTabActive('SupplyChainRequest.Fast')]">
+				Fast
+			</a>
+			<a class="ul_list_floatLeft" ui-sref=".FirstGSCM" ng-class="{true:'Tabactive2',false:''}[SupplyChain.subTabActive('SupplyChainRequest.FirstGSCM')]">
+				First GSCM
+			</a>
+			<a class="ul_list_floatLeft" ui-sref=".SCTeam" ng-class="{true:'Tabactive2',false:''}[SupplyChain.subTabActive('SupplyChainRequest.SCTeam')]">
+				SC Team
+			</a>
+			<a class="ul_list_floatLeft" ui-sref=".FinalGSCM" ng-class="{true:'Tabactive2',false:''}[SupplyChain.subTabActive('SupplyChainRequest.FinalGSCM')]">
+				Final GSCM
+			</a>
+			<a class="ul_list_floatLeft" ui-sref=".SCP" ng-class="{true:'Tabactive2',false:''}[SupplyChain.subTabActive('SupplyChainRequest.SCP')]">
+				SCP
+			</a>
+			<a class="ul_list_floatLeft" ui-sref=".PackEngineer" ng-class="{true:'Tabactive2',false:''}[SupplyChain.subTabActive('SupplyChainRequest.PackEngineer')]">
+				Pack Engineer
+			</a>
+			<a class="ul_list_floatLeft" ui-sref=".RDM" ng-class="{true:'Tabactive2',false:''}[SupplyChain.subTabActive('SupplyChainRequest.RDM')]">
+				RDM
+			</a>-->
+		</ul>
+	</div>
+
+	<br>
+	<div ui-view="lazyLoadView" class="ng_tpls">
+	</div>
+
+</div>

@@ -1,0 +1,98 @@
+<div class="Search_text">Core Range</div>
+<form>
+	<div class="CoreRange_contain">
+		<div class="row ">
+			<div class="col-md-2 col-xs-4 Common_text">Lead AI:</div>
+			<div class="col-md-4 col-xs-8">
+				<select class="form-control Common_select" ng-change="CR.change()" ng-model="CR.requestSelected" ng-options="m.name for m in CR.requestModel" ng-init="CR.requestSelected=''">
+  					<option value="">--Plesae select--</option>
+				</select>
+			</div>
+			<a class="col-sm-12 col-md-6 Common_text" ng-show="CR.LinkShow">Click here to see combi pack range for this Lead AI</a>
+		</div>
+		<div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 line_height"></div>
+		<div class="row">
+			<div class="col-md-2 col-xs-4 Common_text">Formulation:</div>
+			<div class="col-md-4 col-xs-8">
+				<select class="form-control Common_select" ng-disabled="CR.showSelect" ng-change="CR.change1()" ng-model="CR.requestSelected1" ng-options="m.name for m in CR.requestModel1" ng-init="CR.requestSelected1=''">
+  					<option value="">--Plesae select--</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 line_height"></div>
+		<div class="row">
+			<div class="col-md-2 col-xs-4 Common_text">PLS:</div>
+			<div class="col-md-4 col-xs-8">
+				<input class="form-control Common_input1" id="disabledInput" type="text" placeholder="">
+			</div>
+		</div>
+		<div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 line_height"></div>
+		<div class="row">
+			<div class="col-md-2 col-xs-4 Common_text">Sector:</div>
+			<div class="col-md-4 col-xs-8">
+				<input class="form-control Common_input1" id="disabledInput" type="text" placeholder="">
+			</div>
+		</div>
+		<div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 line_height"></div>
+		<div class="row">
+			<div class="col-md-2 col-xs-4 Common_text">Category:</div>
+			<div class="col-md-4 col-xs-8">
+				<input class="form-control Common_input1" id="disabledInput" type="text" placeholder="">
+			</div>
+		</div>
+		<div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 line_height"></div>
+		<div class="row">
+			<div class="col-md-2 col-xs-4 Common_text">Phase Out Date:</div>
+			<div class="col-md-4 col-xs-8">
+				<input class="form-control Common_input1" id="disabledInput" type="text" placeholder="">
+			</div>
+		</div>
+		<div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 line_height"></div>
+		<a class="col-xs-12 col-lg-4 Common_text1">Presentation on Syngenta Branded packs</a>
+	</div>
+	<br>
+	<div class="second_contain" ng-show="CR.NoResult"> No Result! </div>
+	<br>
+	<div class="first_contain" id="dvCRResults" ng-show="CR.showSearchResult">
+		<div style="float:left; width:200px;height:30px"><span>No. of items found:</span> <span>222222</span></div>
+		<div style="float:left; width:100%; height:auto;clear:both; margin-top:20px;">
+			<table border="1" cellpadding="3%" width="95%">
+				<tr style="background-color: #ffec8b">
+					<th colspan="1">Pack and Collation</th>
+					<th colspan="1">Pack Description</th>
+					<th colspan="1">Ancillaries/Special Requirements</th>
+					<th colspan="1">Syngenta Branded Pack<br><a class="a_link_class" style="margin-left: 85px;">?</a></th>
+					<th colspan="1">Comments</th>
+					<th colspan="1">Status</th>
+					<th colspan="1">NSU Code</th>
+				</tr>
+				<tr ng-repeat="col in CR.pageTableRepeat">
+					<td ng-bind="col.RequestID"></td>
+					<td ng-bind="col.RequestType"></td>
+					<td ng-bind="col.Originator"></td>
+					<td ng-bind="col.Date"></td>
+					<td ng-bind="col.LeadAI"></td>
+					<td ng-bind="col.Country"></td>
+					<td ng-bind="col.CodeDueDate"></td>
+				</tr>
+			</table>
+			<nav>
+				<ul class="pagination">
+					<li>
+						<a ng-click="Previous()">
+							<span>pre</span>
+						</a>
+					</li>
+					<li ng-repeat="page in CR.pageList" ng-class="{active: CR.isActivePage(page)}">
+						<a ng-click="CR.selectPage(page)">{{ page }}</a>
+					</li>
+					<li>
+						<a ng-click="Next()">
+							<span>next</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</form>

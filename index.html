@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html ng-app="ERMS">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<title></title>
+		<style>
+
+		</style>
+		<link rel="stylesheet" href="framework/bootstrap-3.0.0/css/bootstrap.css">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/fix.css">
+		<script src="framework/jquery-1.9.1.js"></script>
+		<script src="framework/angular-1.3.0.14/angular.js"></script>
+		<script src="framework/angular-1.3.0.14/angular-route.js"></script>
+		<script src="framework/angular-ui-router.js"></script>
+		<script src="framework/bootstrap-3.0.0/js/bootstrap.js"></script>
+		<script src="framework/ui-bootstrap-tpls-0.11.0.js"></script>
+		<script src="framework/dist/ocLazyLoad.js"></script>
+		<script src="JS/app.js"></script>
+	</head>
+
+	<body ng-controller="headerCtrl as header">
+		<div class="title_contain">
+			<div class="title_head">
+				<div class="head_logo1"><img src="img/Syngenta-old.gif"></div>
+				<div class="head_logo2"><img src="img/Logo_MDM2.jpg"></div>
+			</div>
+			<div class="title_selectButton">
+				<a class="tab_button show_menuButton" ng-click="header.showMainMenu()">三</a>			
+			</div>
+			<div class="head_logo3" ng-click="header.showSubmenu()">
+				<div class="logo3_img"></div>
+				<div class="head_reminder">
+					<div class="reminder_text">12</div>
+				</div>
+			</div>
+			
+			<div class="header_backgroundShade" ng-show="header.mainMenu" ng-click="header.closeShade()"></div>
+			<div class="title_tab" ng-class="{true:'title_tab_new',false:''}[header.mainMenu]" ng-show="header.mainMenu">
+				<a class="tab_button" ui-sref="home" ng-click="header.closeShade()">
+					<div class="button_text">Home</div>
+				</a>
+				<a class="tab_button" ui-sref="CoreRange" ng-click="header.closeShade()">
+					<div class="button_text">Core Range</div>
+				</a>
+				<a class="tab_button" ui-sref="PhaseOuts" ng-click="header.closeShade()">
+					<div class="button_text">Phase Outs</div>
+				</a>
+				<a class="tab_button" ui-sref="NewCodeRequests" ng-click="header.closeShade()">
+					<div class="button_text">New Code Requests</div>
+				</a>
+				<a class="tab_button" ui-sref="SearchExistingRequest" ng-click="header.closeShade()">
+					<div class="button_text">Search Existing Request</div>
+				</a>
+				<a class="tab_button" ui-sref="ERMSReports" ng-click="header.closeShade()">
+					<div class="button_text">ERMS Reports, Documents and Links</div>
+				</a>
+				<a class="tab_button" ui-sref="Admin" ng-click="header.closeShade()">
+					<div class="button_text">Admin</div>
+				</a>
+			</div>
+			<div class="title_tab hide_title_tab">
+				<!--<a ng-repeat="r in header.menuRepeat" class="tab_button" ui-sref="r.uiSelf" ng-class="{true:'active',false:''}[header.subTabActive(r.uiSelf)]">
+					<div class="button_text" ng-bind="r.name"></div>
+				</a>-->
+				<a class="tab_button" ui-sref="home" ng-class="{true:'Tabactive1',false:''}[header.subTabActive('home')]">
+					<div class="button_text">Home</div>
+				</a>
+				<a class="tab_button" ui-sref="CoreRange" ng-class="{true:'Tabactive1',false:''}[header.subTabActive('CoreRange')]">
+					<div class="button_text">Core Range</div>
+				</a>
+				<a class="tab_button" ui-sref="PhaseOuts" ng-class="{true:'Tabactive1',false:''}[header.subTabActive('PhaseOuts')]">
+					<div class="button_text">Phase Outs</div>
+				</a>
+				<a class="tab_button" ui-sref="NewCodeRequests" ng-class="{true:'Tabactive1',false:''}[header.subTabActive('NewCodeRequests')]">
+					<div class="button_text">New Code Requests</div>
+				</a>
+				<a class="tab_button" ui-sref="SearchExistingRequest" ng-class="{true:'Tabactive1',false:''}[header.subTabActive('SearchExistingRequest')]">
+					<div class="button_text">Search Existing Request</div>
+				</a>
+				<a class="tab_button" ui-sref="ERMSReports" ng-class="{true:'Tabactive1',false:''}[header.subTabActive('ERMSReports')]">
+					<div class="button_text">ERMS Reports, Documents and Links</div>
+				</a>
+				<a class="tab_button" ui-sref="Admin" ng-class="{true:'Tabactive1',false:''}[header.subTabActive('Admin')]">
+					<div class="button_text">Admin</div>
+				</a>
+			</div>
+			
+				<div class="head_link" ng-show="header.subMenu" ng-mouseleave="header.showSubmenu()">
+					<div class="link link1">					
+						<div class="link1_text">Home</div>
+					</div>
+					<div class="link link2">
+						<div class="link2_text">Search</div>
+					</div>
+					<div class="link link3">
+						<div class="link3_text">Info</div>
+						<div class="link3_reminder">
+							<div class="reminder_text">12</div>
+						</div>
+					</div>
+					<div class="link link4">
+						<div class="link4_text">Contact</div>
+					</div>
+					<div class="link link5">
+						<div class="link5_text">Help</div>
+					</div>
+				</div>
+		</div>
+
+		<br>
+		<div ui-view="lazyLoadView" class="ng_tpls"></div>
+
+	</body>
+
+</html>

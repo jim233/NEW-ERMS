@@ -1,0 +1,323 @@
+<div ng-controller="SCRSCP as SCP">
+	<form>
+		<div class="SCRtitle_contain">
+			<div class="row">
+				<div class="col-md-7 col-xs-12">
+					<button type="button" class="btn_style btn-default" ng-click="SCP.showSubmenu()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+					<button type="submit" class="btn_style btn-default">
+						<div class="btn_bg"></div>
+						Submit
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="second_contain">
+			<div class="row reserve_height">
+				<div class="col-md-12 col-xs-12 Special_text1" ng-show="SCP.subMenu">Data saved successfully.</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Submitted Date</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+				<div class="col-md-5 line_height_buttom">
+					<a>Supply Chain Planner tool</a>
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">SCP Name</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">FF& P within EAME<span style="color:red">*</span></div>
+				<div class="col-md-4 col-xs-8">
+					<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+				</div>
+				<div class="col-md-5 col-xs-12 line_height_buttom">
+					If No complete HUB Plant details only
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-5 col-md-offset-7 line_height_buttom">
+					If Yes complete FF&P plant details plus any hub if necessar
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Late Labelling ?
+				</div>
+				<div class="col-md-4 col-xs-8">
+					<select class="form-control Common_select" style="width: 90px;" ng-change="SCP.SelectChangeFunc()" ng-model="SCP.optionChecked">
+  						<option value="">Select</option>
+  						<option value="1">Yes</option>
+  						<option value="2">No</option>
+					</select>
+				</div>
+			</div>
+			<div class="LateLabelling_contain" ng-show="SCP.LateLabellingPart">
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-12 Common_text2">Late Labelling details</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">SAP Plant Code</div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Procurement Type</div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">MRP Controller Name</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">MRP Controller Code</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+					<div class="col-md-5 line_height_buttom">
+						Please enter 3 digit code
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Planned in APO?</div>
+					<div class="radio_style">
+						<label style="font-weight: normal;">
+    				<input type="radio" name="optionsRadios" value="0">
+    				Yes
+  					</label>
+					</div>
+					<div class="radio_style">
+						<label style="font-weight: normal;">
+    				<input type="radio" name="optionsRadios" value="1">
+    				No
+  					</label>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Supply Response
+					</div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>Select</option>
+  						<option>Yes</option>
+  						<option>No</option>
+					</select>
+					</div>
+				</div>
+			</div>
+			<div class="FF&P_contain">
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-12 Common_text2">FF&P Plant details</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">System for Code Set up</div>
+					<div class="radio_style">
+						<label style="font-weight: normal;">
+    				<input type="radio" name="optionsRadios" value="0">
+    				GSAP
+  					</label>
+					</div>
+					<div class="radio_style">
+						<label style="font-weight: normal;">
+    				<input type="radio" name="optionsRadios" value="1">
+    				Local ERP 
+  					</label>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">SAP Plant Code</div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Procurement Type</div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">MRP Controller Name</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">MRP Controller Code</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+					<div class="col-md-5 line_height_buttom">
+						Please enter 3 digit code
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Planned in APO?</div>
+					<div class="radio_style">
+						<label style="font-weight: normal;">
+    				<input type="radio" name="optionsRadios" value="0">
+    				Yes
+  					</label>
+					</div>
+					<div class="radio_style">
+						<label style="font-weight: normal;">
+    				<input type="radio" name="optionsRadios" value="1">
+    				No
+  					</label>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Supply Response
+					</div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>Select</option>
+  						<option>Yes</option>
+  						<option>No</option>
+					</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-4 Common_text line_height_buttom">SCP Comments</div>
+					<div class="col-md-4 col-xs-8 line_height_buttom">
+						<textarea class="form-control" rows="8" maxlength="1000">
+					</textarea>
+					</div>
+					<div class="col-md-4 col-xs-7 Common_text line_height_buttom">Maximum 1000 letters</div>
+				</div>
+			</div>
+			<div class="HUB_contain">
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-12 Common_text2">HUB Plant details</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">GSAP Hub Plant Code</div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Supply Plant<span style="color:blue">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">MRP Controller Name<span style="color:blue">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">MRP Controller Code<span style="color:blue">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+					<div class="col-md-5 line_height_buttom">
+						Please enter 3 digit numeric/alphanumeric code
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Purchaser Number<span style="color:blue">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+					<div class="col-md-5 line_height_buttom">
+						Please enter 3 digit code
+					</div>
+				</div>
+			</div>
+			<div class="2ndHUB_contain">
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-12 Common_text2">2nd HUB Plant details-if required</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">GSAP Hub Plant Code</div>
+					<div class="col-md-4 col-xs-8">
+						<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Supply Plant<span style="color:blue">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">MRP Controller Name<span style="color:blue">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">MRP Controller Code<span style="color:blue">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+					<div class="col-md-5 line_height_buttom">
+						Please enter 3 digit code
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Purchaser Number<span style="color:blue">*</span></div>
+					<div class="col-md-4 col-xs-8">
+						<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+					<div class="col-md-5 line_height_buttom">
+						Please enter 3 digit code
+					</div>
+				</div>
+				<div class="row line_height_buttom">
+					<div class="col-md-3 col-xs-4 Common_text">Completed Date</div>
+					<div class="col-md-4 col-xs-8">
+						<input type="date" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					</div>
+				</div>
+			</div>
+			<div class="row line_height_buttom"></div>
+			<div class="row line_height_buttom"></div>
+			<div class="row line_height_buttom">
+				<div class="col-md-12 col-xs-12 Common_text"><span style="color:blue">*</span>- These fields are mandatory when corresponding GSAP Hub Plant Code is selected.</div>
+			</div>
+		</div>
+	</form>
+</div>

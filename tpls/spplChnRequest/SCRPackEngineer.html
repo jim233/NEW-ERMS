@@ -1,0 +1,159 @@
+<div ng-controller="SCRPackEngineer as PackEngineer">
+	<form>
+		<div class="SCRtitle_contain">
+			<!--<div class="row">
+			</div>-->
+		</div>
+		<div class="second_contain">
+			<div class="row reserve_height">
+				<!--<div class="col-md-12 col-xs-12 Special_text1" ng-show="PackEngineer.subMenu">Data saved successfully.</div>-->
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-12 Common_text2">STEP 1</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Pack Tech Name<span style="color:red">*</span></div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+					<input type="button" value="..." class="btn btn-default file_btn" ng-click="open()">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-xs-12 Common_text line_height_buttom">If you wish to e-mail this request to another member of your team for action, select their name from the GAL and then click the save button</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-12 Common_text2">STEP 1</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">EST Pack Comp Date<span style="color:red">*</span></div>
+				<div class="col-md-4 col-xs-8">
+					<input type="date" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-2 col-xs-4 col-md-offset-3">
+					<button type="submit" class="btn_style btn-default">
+						<div class="btn_bg"></div>
+						Submit
+					</button>
+				</div>
+				<div class="col-md-6 col-xs-8">(Click here to save any changes to the Est Pack Comp date)</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-2 col-xs-4 col-md-offset-3">
+					<button type="button" class="btn_style btn-default" ng-click="PackEngineer.showSubmenu1()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+				</div>
+				<div class="col-md-6 col-xs-8">(This will save and submit entry which completes stage 1)</div>
+			</div>
+			<div class="row reserve_height">
+				<div class="col-md-12 col-xs-12 Special_text1 col-md-offset-3 line_height_buttom" ng-show="PackEngineer.subMenu1">Data saved successfully.</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-12 Common_text2">STEP 2</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Packaging Comments</div>
+				<div class="col-md-4 col-xs-8 line_height_buttom">
+					<textarea class="form-control" rows="8" maxlength="2500">
+					</textarea>
+				</div>
+				<div class="col-md-4 col-xs-7 Common_text line_height_buttom">Maximum 2500 letters</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">BPS Design Code</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-xs-4 Common_text line_height_buttom">Is bottle/Formulation ADR Compatible</div>
+				<div class="col-md-4 col-xs-8 line_height_buttom1">
+					<select class="form-control Common_select">
+  						<option>All</option>
+  						<option>2</option>
+  						<option>3</option>
+					</select>
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">EST Work Involved(Man Hours)</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-2 col-xs-4 col-md-offset-3">
+					<button type="button" class="btn_style btn-default" ng-click="PackEngineer.showSubmenu2()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+				</div>
+				<div class="col-md-6 col-xs-8">(This will save step2 details only)</div>
+			</div>
+			<div class="row reserve_height">
+				<div class="col-md-12 col-xs-12 col-md-offset-3 line_height_buttom Special_text1" ng-show="PackEngineer.subMenu2">Data saved successfully.</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-12 Common_text2">STEP 3</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-xs-12 Common_text line_height_buttom">Testing is complete - enter details of final BPS/NSU codes together with date Completed</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">BPS Agi Code</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">NSU Code</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="text" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-2 col-xs-4 col-md-offset-3">
+					<button type="submit" class="btn_style btn-default">
+						<div class="btn_bg"></div>
+						Submit
+					</button>
+				</div>
+				<div class="col-md-6 col-xs-8">(This will save and submit entry which completes stage 3)</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-2 col-xs-4 col-md-offset-3">
+					<button type="button" class="btn_style btn-default" ng-click="PackEngineer.showSubmenu3()">
+						<div class="btn_bg"></div>
+						Save
+					</button>
+				</div>
+				<div class="col-md-6 col-xs-8">(Click here to save any changes to the NSU code and BPS Agi code)</div>
+			</div>
+			<div class="row reserve_height">
+				<div class="col-md-12 col-xs-12 Special_text1 col-md-offset-3 line_height_buttom" ng-show="PackEngineer.subMenu3">Data saved successfully.</div>
+			</div>
+			<div class="row line_height_buttom">
+				<div class="col-md-3 col-xs-4 Common_text">Completed Date</div>
+				<div class="col-md-4 col-xs-8">
+					<input type="date" size="20" name="upfile" id="upfile" class="form-control Small_input">
+				</div>
+			</div>
+			<div class="row line_height_buttom"></div>
+		</div>
+	</form>
+	<!--NPR 3-->
+	<div class="fix_banner" ng-show="PackEngineer.fixBanner">
+		<div class="banner_style">
+			EPM input - Add to Core Range = Yes
+		</div>
+		<div class="banner_style">
+			FAST input - Source = Regional Source Plant = aa
+		</div>
+		<div class="banner_style">
+			SC Team input - Pack = Local
+		</div>
+	</div>
+</div>
